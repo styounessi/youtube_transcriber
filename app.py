@@ -31,12 +31,12 @@ app.layout = html.Div([
         style={'width': '400px'},
         placeholder='Enter YouTube URL',
         type='url'),
-    # Loading indicator, appears when a video is being transcribed/processed
+    # Loading indicator, appears whenever anything is still processing
     dcc.Loading(
         id='table-loading',
         color='red',
         children=[
-            # DataTable via Dash, houses transcription and segment timestamps
+            # DataTable via Dash, houses transcription text and segment timestamps
             dash_table.DataTable(
             id='transcription-table',
             columns=[{'name': i, 'id': i} for i in ['Segment Start',
