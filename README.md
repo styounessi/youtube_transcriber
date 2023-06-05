@@ -33,7 +33,7 @@ Scoop: `scoop install ffmpeg`
 It can also be downloaded and installed manually: [LINK](https://ffmpeg.org/download.html)
 
 ### Docker
-The `Dockerfile` in this repo covers all of these dependencies as well.
+The `Dockerfile` in this repo covers all of these dependencies too.
 ```
 RUN apt-get update && apt-get install git -y
 RUN pip3 install -r requirements.txt
