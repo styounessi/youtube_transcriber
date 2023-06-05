@@ -34,7 +34,7 @@ It can also be downloaded and installed manually: [LINK](https://ffmpeg.org/down
 ### Docker
 The `Dockerfile` in this repo covers all of these dependencies too.
 ```
-RUN apt-get update && apt-get install git -y
-RUN pip3 install -r requirements.txt
-RUN apt-get install -y ffmpeg
+RUN apt-get update \
+    && apt-get install -y ffmpeg \
+    && pip install --no-cache-dir -r requirements.txt
 ```
