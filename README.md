@@ -3,7 +3,7 @@ YouTube Transcriber
 <img src="https://i.imgur.com/myLczH4.png">
 </h1>
 
-A Dash application that transcribes YouTube URLs via OpenAI's transcription engine. Full transcript can be downloaded as a CSV for future use. 
+A Dash application that transcribes YouTube URLs via OpenAI's Whisper transcription engine. Full transcript can be downloaded as a CSV for future use. 
 
 ![Example](https://i.imgur.com/Bjq6LMc.gif)
 
