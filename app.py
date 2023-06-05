@@ -68,7 +68,7 @@ def process_input(youtube_url):
     '''
     Processes the input YouTube URL and transcribe the audio using OpenAI Whisper transcription engine.
     Uses 'base' model and sets fp16=False to suppress CPU warnings. Segment columns are changed
-    from a running tally of seconds to HH:MM:SS timestamps.
+    from a running tally of seconds to HH:mm:ss timestamps.
     
     Args:
         youtube_url (str): The URL of the YouTube video to be transcribed.
