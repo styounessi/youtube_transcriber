@@ -18,19 +18,20 @@ app.layout = html.Div([
                 src='assets/logo.png',
                 style={'width': '30px', 'height': '30px', 'vertical-align': 'middle',
                        'margin-right': '10px', 'margin-bottom': '7px'}
-            ),
+                ),
             'YouTube Transcriber'
-        ],
+            ],
         order=1,
         align='center',
         color='red'
-    ),
+        ),
     # YouTube URL text input
     dmc.TextInput(
         id='youtube-url-input',
         style={'width': '400px'},
         placeholder='Enter YouTube URL',
-        type='url'),
+        type='url'
+        ),
     # Loading indicator, appears whenever anything is still processing
     dcc.Loading(
         id='table-loading',
@@ -38,18 +39,24 @@ app.layout = html.Div([
         children=[
             # DataTable via Dash, houses transcription text and segment timestamps
             dash_table.DataTable(
-            id='transcription-table',
-            columns=[{'name': i, 'id': i} for i in ['Segment Start',
-                                                    'Segment End',
-                                                    'Transcription']],
-            style_table={'width': '100%', 'margin-top': '20px'},  
-            style_cell={'padding': '10px', 'text-align': 'left', 'white-space': 'normal',
-                        'height': 'auto', 'font-family': 'sans-serif'},
-            style_header={'font-weight': 'bold'},
-            page_size=20),
+                id='transcription-table',
+                columns=[{'name': i, 'id': i} for i in ['Segment Start',
+                                                        'Segment End',
+                                                        'Transcription']],
+                style_table={'width': '100%', 'margin-top': '20px'},  
+                style_cell={'padding': '10px', 'text-align': 'left', 'white-space': 'normal',
+                            'height': 'auto', 'font-family': 'sans-serif'},
+                style_header={'font-weight': 'bold'},
+                page_size=20
+                ),
             # Download fetches and delivers CSV payload when clicked, disabled when no data is present
-            dmc.Button('Download as CSV', id='csv-download-button', disabled=True,
-                       color='red', style={'margin-top': '5px'}),
+            dmc.Button(
+                'Download as CSV',
+                id='csv-download-button',
+                disabled=True,
+                color='red',
+                style={'margin-top': '5px'}
+                ),
             dcc.Download(id='download-csv')
             ]       
         )
