@@ -1,5 +1,5 @@
-dash
-dash-mantine-components
-pandas
-pytube
-openai-whisper
+dash==2.11.1
+dash-mantine-components==0.12.1
+pandas==2.0.3
+pytube==15.0.0
+openai-whisper==20230314
